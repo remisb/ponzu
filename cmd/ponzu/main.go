@@ -207,6 +207,8 @@ var serveCmd = &cobra.Command{
 }
 
 func init() {
+	fmt.Println("Hello From REMIS and ROBERTAS. (c) 2019")
+
 	for _, cmd := range []*cobra.Command{runCmd, serveCmd} {
 		cmd.Flags().StringVar(&bind, "bind", "localhost", "address for ponzu to bind the HTTP(S) server")
 		cmd.Flags().IntVar(&httpsport, "https-port", 443, "port for ponzu to bind its HTTPS listener")
